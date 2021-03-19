@@ -4,9 +4,6 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  stats: {
-    children: true
-  },
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
