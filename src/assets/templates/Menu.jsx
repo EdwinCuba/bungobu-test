@@ -1,5 +1,7 @@
 import React, { useState, useEffect, createRef } from 'react';
-import MenuLogo from '../static/menu.png';
+import { Link } from 'react-router-dom';
+import MenuIcon from '../static/menu.png';
+import MenuExitIcon from '../static/menu-exit.png';
 import '../styles/Menu.css';
 
 const Menu = () => {
@@ -7,7 +9,6 @@ const Menu = () => {
   const container = createRef();
 
   useEffect(() => {
-    console.log(`${showMenu}`);
     if (showMenu) {
       container.current.style.left = 0;
     } else {
@@ -18,30 +19,33 @@ const Menu = () => {
   return (
     <div className="menu">
       <div className="menu-logo" onClick={() => setShowMenu(true)}>
-        <img src={MenuLogo} alt="menu" />
+        <img src={MenuIcon} alt="menu" />
       </div>
       <div className="menu-container" ref={container}>
         <section className="menu-container__header">
+          <div className="name">
+            <h2>Menu</h2>
+          </div>
           <div className="menu-logo" onClick={() => setShowMenu(false)}>
-            <img src={MenuLogo} alt="menu" />
+            <img src={MenuExitIcon} alt="menu" />
           </div>
         </section>
         <section className="menu-container__nav">
           <ul>
             <li>
-              <a href="">
+              <Link to="/instagram">
                 Facebook
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
-                Intagram
-              </a>
+              <Link to="/instagram">
+                Instagram
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="/instagram">
                 Nosotros
-              </a>
+              </Link>
             </li>
           </ul>
         </section>

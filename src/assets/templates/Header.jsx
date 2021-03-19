@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Menu from '../templates/Menu.jsx';
 import '../styles/Header.css'
 
@@ -7,7 +8,9 @@ const Header = () => {
     <>
       <header>
         <div className="name">
-          <h1>Bungobu Store</h1>
+          <h1>
+            <Link to="/">Bungobu Store</Link>
+          </h1>
         </div>
         <Menu />
       </header>
