@@ -17,7 +17,7 @@ const Menu = () => {
   });
 
   return (
-    <div className="menu">
+    <div className="Menu">
       <div className="menu-logo" onClick={() => setShowMenu(true)}>
         <img src={MenuIcon} alt="menu" />
       </div>
@@ -32,21 +32,21 @@ const Menu = () => {
         </section>
         <section className="menu-container__nav">
           <ul>
-            <li>
-              <Link to="/instagram">
+            <Link to="/facebook">
+              <li>
                 Facebook
-              </Link>
-            </li>
-            <li>
-              <Link to="/instagram">
+              </li>
+            </Link>
+            <Link to="/instagram">
+              <li>
                 Instagram
-              </Link>
-            </li>
-            <li>
-              <Link to="/instagram">
+              </li>
+            </Link>
+            <Link to="/instagram">
+              <li>
                 Nosotros
-              </Link>
-            </li>
+              </li>
+            </Link>
           </ul>
         </section>
       </div>

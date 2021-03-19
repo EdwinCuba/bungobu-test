@@ -1,13 +1,21 @@
 import React from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from '../assets/templates/Header';
+import Home from '../containers/Home.jsx';
+import Layout from '../assets/templates/Layout'
 
 const App = () => (
   <Router>
-    <Route path="/" component={Header}></Route>
-    <Route path="/instagram" component={() => {
-      window.open('https://www.instagram.com/bungobustore/');
+    <Layout>
+      <Route exact path="/" component={Home} />
+    </Layout>
+    <Route exact path="/instagram" component={() => {
       window.location.hash = '/';
+      window.open('https://www.instagram.com/bungobustore');
+      return null;
+    }} />
+    <Route exact path="/facebook" component={() => {
+      window.location.hash = '/';
+      window.open('https://www.facebook.com/Bungobu-Store-112793324181869');
       return null;
     }} />
   </Router>
