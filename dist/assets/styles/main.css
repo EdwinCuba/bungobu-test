@@ -1,11 +1,51 @@
 @import url(https://fonts.googleapis.com/css2?family=Redressed&display=swap);
-.menu{
-  height: 100%;
+.Home{
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+  height: 100%;
+}
+
+.carousel-products{
+  height: 320px;
+  width: 100%;
+  background-color: #fff1d6;
+  position: relative;
+  z-index: -1;
+}
+.description{
+  width: 100%;
+  min-height: 500px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description__container{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+}
+.title-section{
+  margin-top: 20px;
+}
+.title-section h2{
+  margin: 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #46443f;
+}
+.text-section p{
+  margin: 30px 0;
+  text-align: justify;
+  font-size: 2rem;
+  color: #615e57;
+
+}
+.text-section p a{
+  margin-left: 5px;
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: #494741;
+  cursor: pointer;
 }
 .menu-logo {
   height: 24px;
@@ -20,14 +60,14 @@
   opacity: 55%;
 }
 .menu-container{
-  position: absolute;
-  top: 0;
-  left: 100%;
   height: 100%;
   width: 100%;
   overflow: hidden;
   transition: all 1s ease;
   background-color: #fff0c9;
+  position: absolute;
+  top: 0;
+  left: 100%;
 }
 .menu-container__header{
   width: 100%;
@@ -36,10 +76,12 @@
   box-shadow: 0px -10px 20px 4px;;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 .name h2{
   font-family: 'Redressed', cursive;
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin: 0px;
   color: black;
   opacity: 55%;
@@ -47,6 +89,8 @@
 .menu-container__nav{
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 0;
 }
 .menu-container__nav ul{
   margin: 0;
@@ -54,23 +98,43 @@
   height: 100%;
   width: 100%;
 }
-.menu-container__nav ul li{
+.menu-container__nav ul a li{
   list-style: none;
-  display: block;
   height: 21vh;
+  color: #5f5f5f;
+  font-size: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid #7b000014;
+  position: relative;
+  z-index: 0;
+  transition: all 1s ease;
 }
-.menu-container__nav li a{
+.menu-container__nav ul a{
   text-decoration: none;
-  color: #5f5f5f;
-  font-size: 4rem;
+  display: block;
+  position: relative;
 }
-
-.menu-container__nav ul li:hover{
-  background-color: white;
+.menu-container__nav ul li::before{
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: #fff9ea;
+  transition: all .2s ease;
+  z-index: -1;
+}
+.menu-container__nav li:active{
+  /* transform: scale3d(1.2, 1.2, 1); */
+  /* box-shadow: 0 0 0 0; */
+  color: #272727;
+}
+.menu-container__nav li:active::before{
+  width: 100%;
+  left: 0;
 }
 */
 *{
@@ -78,27 +142,32 @@
 }
 body{
   margin: 0;
+  background-color: #fffaec;
 }
 html{
   font-size: 62.5%;
 }
-
+#app{
+  position: relative;
+  overflow: hidden;
+}
 header{
   width: 100%;
   height: 60px;
   background-color: #ffe39a;
   display: flex;
   align-items: center;
-  box-shadow: 0px -10px 20px 4px;;
+  box-shadow: 0px -10px 20px 4px;
+  z-index: 1;
 }
 .name{
-  height: 24px;
-  width: 108px;
+  height: 28px;
+  width: 130px;
   margin-left: 10px;
 }
 .name h1{
   font-family: 'Redressed', cursive;
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin: 0px;
   color: black;
 } 

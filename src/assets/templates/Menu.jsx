@@ -32,21 +32,21 @@ const Menu = () => {
         </section>
         <section className="menu-container__nav">
           <ul>
-            <Link to="/facebook">
-              <li>
+            <li>
+              <Link to="/facebook">
                 Facebook
-              </li>
-            </Link>
-            <Link to="/instagram">
-              <li>
+              </Link>
+            </li>
+            <li>
+              <Link to="/instagram">
                 Instagram
-              </li>
-            </Link>
-            <Link to="/instagram">
-              <li>
+              </Link>
+            </li>
+            <li>
+              <Link to="/instagram">
                 Nosotros
-              </li>
-            </Link>
+              </Link>
+            </li>
           </ul>
         </section>
       </div>
