@@ -80,7 +80,7 @@ const Home = () => {
       </section>
 
       <section className="description">
-        <div className="description__container">
+        <div className="description__container" id="about-us">
           <div className="title-section">
             <h2>Quienes somos</h2>
           </div>

@@ -8,7 +8,7 @@
 }
 
 .carousel-products{
-  height: 320px;
+  height: 100%;
   width: 100%;
   background-color: #fff1d6;
   position: relative;
@@ -22,8 +22,8 @@
 }
 .slide{
   display: inline-block;
-  height: 320px;
-  width: 320px;
+  /* height: 320px; */
+  width: 100%;
   position: relative;
 }
 .slideDots{
